@@ -1,0 +1,331 @@
+Civitas 移动端交互函数文稿
+
+String userName 玩家帐号
+String Password  玩家密码
+
+
+－－－－－－－－－－－玩家属性－－－－－－－－－－－－－－
+
+/*获取当前玩家的属性值
+	@input 玩家帐号
+	@return 一个包含玩家名字，等级，经验，精力，快乐，健康，饥饿的列表
+*/
+List<String> getStatus(userName)
+{
+	return List = name,level,Exp,energy,happy,health,hunger
+}
+
+
+/*获取工作地址
+	@input 用户名
+	@return String 工作地点，没有工作return null
+
+*/
+String getWorkPlace（userName）
+{
+	return String
+}
+
+
+/*进行当日工作
+	@input 用户名，工作策略
+	@return 成功返回所以属性，失败＝1，已经工作过 ＝2，没有工作 ＝3，没有指定策略＝4
+*/
+List<String> workForDay(userName,String Strategy)
+{
+	List<String>中信息尚未采集
+}
+
+
+/*返回居住地点
+	@input 用户名
+	@return String地址，没有住址 ＝1
+*/
+String getLivingPlace(userName)
+{
+	return place
+}
+
+－－－－－－－－－－－－餐馆相关－－－－－－－－－－－－－
+/*获取指定街区的所有餐馆
+	@input 街区名
+	@return 将所有餐馆名字放入list，list第一项为街区名字
+*/
+List<String> getRestaurantInDistrict(String District)
+{
+	return List
+}
+
+public class dish
+{
+	String name			//菜名
+	String hungerChange	//饥饿变化
+	String happyChange	//快乐变化
+	String healthChange	//健康变化
+	String energyChange	//精力变化
+	String luxuryChange	//奢侈度变化
+	String price			//价格
+	String remains			//剩余数量
+}
+
+/*获取某个街区餐馆里面的所有菜品
+	@input 街区名，餐馆名
+	@return 菜品列表， 无法match 街区或餐馆  ＝ null
+*/
+List<dish> getDishesInRestaurant(String District,String restaurantName)
+{
+	return List<dish>
+}
+
+/*用户食用特定食物
+	@input 用户名，街区名，餐馆名，菜品名
+	@return 成功＝0，没有剩余 ＝1，查无餐馆＝2，查无菜品＝3
+
+*/
+int chooseTargetDis(String userName，String District,String restaurant，String dish)
+{
+	return int
+}
+
+－－－－－－－－－－－－技能经验－－－－－－－－－－－－－
+/*获取目标时间之后更新的技能与经验
+	@input 用户名，时间
+	@return null 如果未更形，List<List<String>>更新
+
+*/
+List<List<String>> getExperience(userName，String time)
+{
+	嵌套List，List<String>中第一项技能名，第二项抬头等级，第三项技能等级
+	然后每两项代表一个经验，经验名 ＋ 经验百分比
+}
+
+－－－－－－－－－－－－教育系统－－－－－－－－－－－－－
+
+public class EducationExperience
+{
+	String skillName		//技能名
+	String skillLevel			//技能等级
+	String comprehension	//领悟度
+	String breakingProp		//突破概率
+	String description		//额外描述
+}
+
+/*获取所有技能
+	@input 用户名
+	@return 工作经验列表
+
+*/
+
+List<EducationExperience> getEducationExperience(userName)
+{
+	return List
+}
+
+
+/*获取教育行为，切磋或者参与教育
+	@input 用户名
+	@return String 教育行为描述
+
+*/
+String getEducationBehave(userName)
+{
+	return String
+}
+
+－－－－－－－－－－－－副业相关－－－－－－－－－－－－－
+public class Minor
+{
+	String output				//产出货物
+	String level				//产出货物等级
+	String energyCost			//花费精力
+	String skill					//技能
+	String experience			//经验
+	String expectedProductivity	//预计产能
+	String output				//产出数量
+
+	/*以下项目可能因为个别副业而是null
+		所以当不需要消耗时，material ＝"nothing'"
+		其他填null
+	*/
+	String material				//原料
+	String materialLevel			//原料等级
+	String materialNeed		//原料需求
+	String materialHave			//原料持有量
+}
+/*获取所有的副业项目
+	@input 用户名
+	@return 所有副业的list
+*/
+List<Minor> getMyMinors(userName)
+{
+	return list
+}
+
+/*进行副业工作
+	@input 用户名，副业名字
+	@return 成功＝0，失败＝1，已经工作过＝2，原料不足＝3
+
+*/
+int chooseMinor(userName, String Minor)
+{
+	return int
+}
+－－－－－－－－－－－－性格习惯－－－－－－－－－－－－－
+public class Personality
+{
+	String Point //剩余可用属性点
+
+	/* 每一组属性对应一个，所以每一个值是从－100～100*/
+	String diligent	//勤奋
+	String exploit	//开拓
+	String radical	//急进
+	String luxurious//奢侈
+
+	/* 用来保存效果字段*/
+	String diligentEffect
+	String exploitEffect
+	String radicalEffect
+	String luxuriousEffect
+}
+
+/*获取目标时间之后的个人性格*/
+List<String> getPersonality(userName，String time)
+{
+	return list
+}
+
+
+/*向目标性格移动一个点数
+	@input 玩家帐户，目标性格
+	@return 成功＝0，失败＝1
+*/
+int movePersonalityTo(userName,String P)
+{
+	return int
+}
+
+－－－－－－－－－－－－个人通知&站内信－－－－－－－－－－
+
+public class Notification
+{
+	String content
+	String notificationType
+	/*
+	TypeList
+	@all				//所有
+	@individual		//个人
+	@friendship		//友谊
+	@exchange		//交易
+	@jobAndEstate	//工作与不动产
+	
+	*/
+}
+
+/*获取通知
+	@input 帐号，通知种类，时间
+	@return 在time之后，List<List<String>>的所有通知
+*/
+List<String> getNotifications(userName,String Type，String time)
+{
+	return List
+}
+
+List<List<String>> getChat(userName，String time)
+{
+	嵌套List，第一层 List<String>代表对于指定用户的所有留言，第0项保存目标用户帐号
+	再用List<List<String>>排列起来
+}
+
+/*给目标用户发送站内信
+	@input 用户名，目标用户名，站内内容
+	@return 成功＝0，失败＝1
+*/
+int SendMessageTo(userName,String TargetUser,String massage)
+{
+	return int
+}
+
+－－－－－－－－－－－－广场相关－－－－－－－－－－－－－
+/*获取经济指数
+	@input
+	@return List<String>所有经济指数
+*/
+List<String> getEconomicIndex()
+{
+	return list
+	List setting
+	0 － 地名 “亚历山大”
+	1 － 日期 “第301天”
+	2 － 4 “907”“＋2.5%”“工作人口”
+	此后每三项组合一个block 
+}
+
+/*获取热门演讲｜系统通知
+	@input 
+	@return 广场页面的热门演讲｜系统通知
+*/
+Speech getHotSpeech()
+{
+	return Speech
+}
+Speech getSystemInfo()
+{
+	return Speech
+}
+
+/*把移动端的每次更新做成演讲发送*/
+Speech getMSystemInfo()
+{
+	return Speech
+}
+－－－－－－－－－－－－街区相关－－－－－－－－－－－－－
+/*返回街区的三个指数，卫生，繁荣，产业
+
+*/
+
+List<String> getDistrictIndex()
+{
+	list @卫生@繁荣@产业
+}
+
+/*返回街区布告*/
+String getDistrictNotification()
+{
+	return String
+}
+
+－－－－－－－－－－－－演讲相关－－－－－－－－－－－－－
+Public class Speech
+{
+	String image;	//用户头像
+	String speaker;	//演讲用户名
+	String content;	//演讲内容
+	int cheer		//欢呼数
+	int attention	//关注数
+	int hooting		//倒彩数
+	String time	//发布时间
+
+}
+
+
+/*获取广场上的演讲
+	@input null
+	@return List广场上所有的Speech
+*/
+List<Speech> getSpeeches()
+{
+	return List
+}
+
+/*获取关注的人的演讲
+	@input 用户名
+	@return List关注人的Speech
+*/
+List<Speech> getMySpeeches(userName)
+{
+	return List
+}
+
+
+
+

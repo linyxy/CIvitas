@@ -1,0 +1,205 @@
+Civitas 市场交互内容函数
+
+1个Page ＝ 20条纪录
+Page = 0  1-20条
+Page＝1  21-40条
+所有市场都只返回交付选项为一星小麦粉的条目
+
+
+－－－－－－－－－－－实物市场－－－－－－－－－－－－－－
+
+public Class Commodity 这个内容
+{
+	String seller;  	//卖方
+	String goods;	//商品名
+	String level；	//商品等级
+	String remaining;	//商品剩余数量
+	String pricePerUnit;	//商品单价
+}
+
+
+/*在没有选定的情况下读取一页的市场报价
+	@input 传入要读取的页数，显示选择的页码
+	@return一个commodity的List
+*/
+List<Commodity>  getGoodsOnMarket(int page)
+{
+	return List
+}
+
+
+/*在确定一个商品的情况下返回所有出售货物
+	@input 目标商品名，页码
+	@return 目标商品列表
+*/
+List<Commodity> getTargetGoods(String targetGood,int page)
+{
+	return list
+}
+
+/*购买物品
+	@input 目标商品，购买数量
+	@return 成功 ＝＝0 失败＝＝1
+*/
+int chooseTargetCommodity(Commodity comma,String quantity,String targetStoreroom)
+{
+	return int
+}
+
+－－－－－－－－－－－招聘市场－－－－－－－－－－－－－－
+/*每个人的基础产能在不同行业是不一样的
+	 展现时候利用另外一个函数getBasicProductivity(String jobType)在个人属性包获取产能
+	 
+*/
+public class job
+{
+	String place; 		//工作地名
+	String level;		//地产等级
+	String skill;		//技能种类
+	String experience;	//经验种类
+	String basicProductivity;		// 基础产能
+	String salaryPerProductivity;	//每产能工资
+	String ultimateSalary;		//总工资
+}
+
+/*获取目标产业的基础产能*/
+getBasicProductivity(String jobType)[定义在个人属性包中］
+
+/*得到当前页的所有职务
+	@input 页码
+	@return 一个可应聘的jobs的list
+*/
+List<job> getJobs(int page)
+{
+	return list
+}
+/*所有职业的列表 */
+List<job> getAllJobs(int page)
+{
+	return list
+}
+/* 选定职业招聘*/
+List<job> getTargetJobs(String type,int page)
+{
+	list
+}
+
+/*应聘目标职务
+	@input 目标职务
+	@return 成功＝0，失败＝1，需辞去当前工作＝2
+*/
+int  chooseTargetJob(job job)
+
+－－－－－－－－－－－租屋市场－－－－－－－－－－－－－－
+public class rent
+{
+	String place;		//住房名
+	String type;		//住房类型
+	String level		//住房等级
+	String costPerDay;	//每日租金
+	String rentLength;	//租赁时间
+	String totalCost;	//总租金
+	String district;		//住房所在地区
+	String healthIndex;	//卫生指数
+	String prosperityIndex;//繁荣指数
+	String industryIndex;	//工业指数
+}
+
+List<rent> getRentableHouse(int page)
+{
+	return list
+}
+List<rent> getAllHouse(int page)
+{
+	return list
+}
+
+/*带限制的搜索方式*/
+List<String> limit
+{
+	String district;
+	String length;
+	String type;
+	String level;
+}
+List<rent> chooseTargetHouse(List<String> limit,int page)
+{
+	return list
+}
+/*租赁目标房屋
+	@input 目标房屋
+	@return 成功＝0，失败＝1，需退房＝2
+
+*/
+int takeRent(rent rent)
+{
+	return int
+}
+
+
+－－－－－－－－－－－－库房相关－－－－－－－－－－－－－－
+
+public class Good
+{
+	String goods 	// 物品名字
+	String level 	//物品等级
+	String total	//物品总量
+	String onMarket//有多少已在市场报价
+	String targetStoreroom //物品所在仓库
+
+}
+
+
+/*获取当前玩家的默认库房
+	@input 玩家帐号
+	@return 返回用户默认仓库所有货物
+
+*/
+List<Good> getDefaultStoredGoods(userName)
+{
+	return List
+}
+
+
+*获取当前玩家的当地所有库房物品
+	@input 玩家帐号
+	@return 返回该玩家当地库房所有物品
+
+*/
+List<Good> getAllStoredGoods(userName)
+{
+	return List
+}
+
+
+/*获取玩家的所有可用库房名字
+	@input 玩家帐号
+	@return 此玩家所有的库房名字
+*/
+List<String> getStoreroom(userName)
+{
+	String roomName
+	return List
+}
+
+
+/*获取当前玩家的指定库房货物
+	@input 玩家帐号，库房名字
+	@return 返回用户指定仓库所有货物
+
+*/
+List<Good> getDefaultStoredGoods(userName,String targetStoreroom)
+{
+	return List
+}
+
+/*选择目标仓库
+	@input 用户名，目标仓库
+	@return 成功＝0，失败＝1
+*/
+int chooseTargetStoreroom(userName,String targetStoreroom)
+{
+	return int
+}
+
+
