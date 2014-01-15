@@ -58,14 +58,14 @@ List<String> getRestaurantInDistrict(String District)
 
 public class dish
 {
-	String name			//菜名
+	String name		//菜名
 	String hungerChange	//饥饿变化
 	String happyChange	//快乐变化
 	String healthChange	//健康变化
 	String energyChange	//精力变化
 	String luxuryChange	//奢侈度变化
-	String price			//价格
-	String remains			//剩余数量
+	String price		//价格
+	String remains		//剩余数量
 }
 
 /*获取某个街区餐馆里面的所有菜品
@@ -104,8 +104,8 @@ List<List<String>> getExperience(userName，String time)
 public class EducationExperience
 {
 	String skillName		//技能名
-	String skillLevel			//技能等级
-	String comprehension	//领悟度
+	String skillLevel		//技能等级
+	String comprehension		//领悟度
 	String breakingProp		//突破概率
 	String description		//额外描述
 }
@@ -138,9 +138,9 @@ public class Minor
 	String output				//产出货物
 	String level				//产出货物等级
 	String energyCost			//花费精力
-	String skill					//技能
+	String skill				//技能
 	String experience			//经验
-	String expectedProductivity	//预计产能
+	String expectedProductivity		//预计产能
 	String output				//产出数量
 
 	/*以下项目可能因为个别副业而是null
@@ -149,7 +149,7 @@ public class Minor
 	*/
 	String material				//原料
 	String materialLevel			//原料等级
-	String materialNeed		//原料需求
+	String materialNeed			//原料需求
 	String materialHave			//原料持有量
 }
 /*获取所有的副业项目
@@ -170,6 +170,41 @@ int chooseMinor(userName, String Minor)
 {
 	return int
 }
+
+－－－－－－－－－－－－藏书相关－－－－－－－－－－－－－
+public class Book
+{
+	String name		//书名
+	String bookCode		//编号（卷本号）
+	String createDate	//创建日期
+	String updateDate	//更新日期
+	
+	String Price		//价格
+	String rent_sell	//租用or出售
+}
+/*获取广场上可用入的藏书
+	@input
+	@return book的list
+*/
+List<Book> getBooksOnSquare()
+{
+	return list
+}
+
+/*购买或借阅某本书
+	@input 用户名
+	@return 成功＝0，失败＝1。
+
+*/
+int chooseBook(userName)
+{
+	return int
+}
+
+－－－－－－－－－－－－不动产管理－－－－－－－－－－－－
+
+
+
 －－－－－－－－－－－－性格习惯－－－－－－－－－－－－－
 public class Personality
 {
@@ -300,9 +335,9 @@ Public class Speech
 	String image;	//用户头像
 	String speaker;	//演讲用户名
 	String content;	//演讲内容
-	int cheer		//欢呼数
+	int cheer	//欢呼数
 	int attention	//关注数
-	int hooting		//倒彩数
+	int hooting	//倒彩数
 	String time	//发布时间
 
 }
@@ -325,7 +360,5 @@ List<Speech> getMySpeeches(userName)
 {
 	return List
 }
-
-
 
 
