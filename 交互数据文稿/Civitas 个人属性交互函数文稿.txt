@@ -5,6 +5,14 @@ String Password  玩家密码
 
 
 －－－－－－－－－－－玩家属性－－－－－－－－－－－－－－
+/*登陆
+	@input 玩家帐号，玩家密码
+	@output 成功登陆返回玩家帐号，失败返回false
+*/
+<String> login(userName,password)
+{
+	return string
+}
 
 /*获取当前玩家的属性值
 	@input 玩家帐号
