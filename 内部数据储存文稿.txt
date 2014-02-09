@@ -1,0 +1,12 @@
+用于介绍内部储存数据方式的文稿
+
+用户帐号与属性储存于 sharedPreferences里面
+FileName = "personStatus"
+	用户名 userName
+	精力值 energy
+	快乐值 happy
+	健康值 health
+	饥饿值 hunger
+	等级   level
+	经验   exp
+	工作地点workPlace
